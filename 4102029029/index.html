@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Homework</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#hide").click(function() {
+                $("p").hide();
+            });
+            $("#show").click(function() {
+                $("p").show();
+            });
+            $("#slide").click(function() {
+                $("p").slideDown();
+                $("p").slideUp();
+            });
+            $("#stoggle").click(function() {
+                $("p").slideToggle();
+            });
+            $("#toggle").click(function() {
+                $("p").toggle();
+            });
+            $("#sps").click(function() {
+                $("#srp").fadeIn(300)
+                $("#srp").fadeToggle()
+            });
+            $("#fp").click(function() {
+                $("#fp").fadeOut(100);
+                $("#sp").fadeIn(1000);
+            });
+            $("#sp").click(function() {
+                $("#sp").fadeTo(100, 0);
+                $("#sp").fadeOut(1);
+                $("#tp").show(1000);
+            });
+            $("#tp").click(function() {
+                $("#tp").fadeOut(100);
+                $("#fop").slideDown(1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--  This is Homework 4   -->
+    <header>
+        <center>
+            <h2>點貓看貓</h2>
+        </center>
+    </header>
+    <div>
+        <center>
+            <div id="fp">
+                <img src="images/cat.jpg">
+                <p style="display:none">詳細介紹：波斯貓</p>
+            </div>
+            <div id="sp" style="display:none">
+                <img src="images/cat2.jpg">
+                <p style="display:none">詳細介紹：折耳貓</p>
+            </div>
+            <div id="tp" style="display:none">
+                <img src="images/cat3.jpg">
+                <p style="display:none">詳細介紹：貓</p>
+            </div>
+            <div id="fop" style="display:none">
+                <img src="images/cat4.jpg" style="height:478px;width:840px">
+                <p style="display:none">詳細介紹：貓咪</p>
+            </div>
+            <div id="srp" style="display:none">
+                <p>Now you see me. Now you don't.</p>
+                <img src="images/garfield.jpg">
+            </div>
+            <br>
+            <button id="hide">更少內容</button>
+            <button id="show">更多內容</button>
+            <button id="stoggle">滑起來</button>
+            <button id="slide">不給看</button>
+            <button id="toggle">滑不起來</button>
+            <button id="sps">Surprise</button>
+        </center>
+    </div>
+</body>
+
+</html>
